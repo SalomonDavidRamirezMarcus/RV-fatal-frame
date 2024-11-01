@@ -3,34 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class pistola : MonoBehaviour
+public class Pistola : MonoBehaviour
 {
-    public XRGrabInteractable grabInteractable;
-    public disparo disparo;
-    public GameObject shootFX;
 
-    // Start is called before the first frame update
-    void Start()
+    public XRGrabInteractable grabInteract;
+
+    public Disparo disparo;
+
+    public GameObject shootFx;
+
+
+    private void Start()
     {
-        grabInteractable.activated.AddListener(x => Disparando());
-        grabInteractable.deactivated.AddListener(x => DejarDisparar());
-
-        
-    }
-
-    public void Disparando()
-    {
-        disparo.Disparar();
-
+        grabInteract.activated.AddListener(x => Disparando());
+        grabInteract.deactivated.AddListener(x => DejarDisparar());
     }
     public void DejarDisparar()
     {
-        Debug.Log("noDispara");
+        Debug.Log("Disparandon't");
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Disparando()
     {
-        
+        disparo.Disparar();
     }
 }

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class disparo : MonoBehaviour
+public class Disparo : MonoBehaviour
 {
+
     public Transform firePoint;
     public int damage = 25;
 
@@ -13,10 +14,10 @@ public class disparo : MonoBehaviour
 
     public void Disparar()
     {
-        StartCoroutine(Disparo());
+        StartCoroutine(disparo());
 
     }
-    IEnumerator Disparo()
+    IEnumerator disparo()
     {
 
         RaycastHit hit;
@@ -30,7 +31,7 @@ public class disparo : MonoBehaviour
             Instantiate(shootFX, firePoint.transform.position, firePoint.transform.rotation);
 
             Enemy enemy = hit.collider.GetComponent<Enemy>();
-            
+
             if (enemy != null)
             {
                 // Aplicar daño al enemigo
@@ -38,10 +39,10 @@ public class disparo : MonoBehaviour
 
             }
         }
-        else 
+        else
         {
             lineRenderer.SetPosition(0, firePoint.position);
-            lineRenderer.SetPosition(1, firePoint.position + firePoint.forward*20);
+            lineRenderer.SetPosition(1, firePoint.position + firePoint.forward * 20);
         }
         lineRenderer.enabled = true;
         yield return new WaitForSeconds(0.2f);
@@ -49,3 +50,4 @@ public class disparo : MonoBehaviour
     }
 
 }
+
