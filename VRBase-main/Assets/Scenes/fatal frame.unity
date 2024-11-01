@@ -1482,7 +1482,7 @@ Light:
   m_GameObject: {fileID: 1413343067}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 1
+  m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_Intensity: 1
@@ -1496,7 +1496,7 @@ Light:
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_NormalBias: 0.07
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1

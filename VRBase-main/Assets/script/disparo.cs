@@ -6,7 +6,7 @@ public class Disparo : MonoBehaviour
 {
 
     public Transform firePoint;
-    public int damage = 25;
+    public int damage = 100;
 
     public LineRenderer lineRenderer;
     public GameObject shootFX, impact;
