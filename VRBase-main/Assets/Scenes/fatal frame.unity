@@ -853,6 +853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 308945750}
   speed: 2
+  rotationSpeed: 5
 --- !u!114 &745638437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2537,55 +2538,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6189354538098044173, guid: 2fd3e07afe5b461490fb8e314976b1b0, type: 3}
   m_PrefabInstance: {fileID: 1794843833}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1828615320
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1828615322}
-  - component: {fileID: 1828615321}
-  m_Layer: 0
-  m_Name: fantasmas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1828615321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828615320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dfcd93d53ce0e24ab1cd504fb2c4162, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4973208356074098553, guid: 649207b0a24e620478fb92d9cd1175e1, type: 3}
-  spawnInterval: 15
-  spawnPoint: {fileID: 1828615322}
-  spawnRange: 10
-  player: {fileID: 308945750}
---- !u!4 &1828615322
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828615320}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 2.01, z: -15.61}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2075474081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2717,6 +2669,67 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1378733843}
   m_SourcePrefab: {fileID: 100100000, guid: 09db9ea8cde56844287e21c4c9fddcb0, type: 3}
+--- !u!1001 &296136049985665785
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 23858281497715450, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 23858281497715450, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 23858281497715450, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 23858281497715450, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23858281497715450, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23858281497715450, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23858281497715450, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23858281497715450, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23858281497715450, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23858281497715450, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468579702504238365, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
+      propertyPath: m_Name
+      value: fantasmas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615191813697757808, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 308945750}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 489c277e443e40d4caf0e114c473ef7c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2726,6 +2739,6 @@ SceneRoots:
   - {fileID: 1390680792}
   - {fileID: 1465779927}
   - {fileID: 2075474081}
-  - {fileID: 1828615322}
+  - {fileID: 296136049985665785}
   - {fileID: 27382182}
   - {fileID: 556747251}

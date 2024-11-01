@@ -5,19 +5,9 @@ using UnityEngine;
 public class EnemyFollow : MonoBehaviour
 {
     public Transform player; // Referencia al jugador
-    public float speed = 2f; // Velocidad de movimiento del enemigo, ajustada para ser más lenta
+    public float speed = 2f; // Velocidad de movimiento del enemigo
+    public float rotationSpeed = 5f; // Velocidad de rotación, ajustable desde el Inspector
 
-    void Update()
-    {
-        if (player != null) // Asegura que el jugador esté asignado
-        {
-            // Calcula la dirección hacia el jugador
-            Vector3 direction = (player.position - transform.position).normalized;
-
-            // Movimiento constante hacia el jugador
-            transform.position += direction * speed * Time.deltaTime;
-        }
-    }
     void Start()
     {
         if (player == null)
@@ -27,6 +17,25 @@ public class EnemyFollow : MonoBehaviour
         else
         {
             Debug.Log("Enemigo está siguiendo a: " + player.name);
+        }
+    }
+
+    void Update()
+    {
+        if (player != null)
+        {
+            // Calcula la dirección hacia el jugador
+            Vector3 direction = (player.position - transform.position).normalized;
+
+            // Rotación para mirar al jugador
+            if (direction != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            }
+
+            // Movimiento constante hacia el jugador
+            transform.position += direction * speed * Time.deltaTime;
         }
     }
 }
